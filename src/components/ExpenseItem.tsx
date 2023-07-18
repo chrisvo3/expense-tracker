@@ -1,16 +1,18 @@
+import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
-const ExpenseItem = (props) => {
+export type ExpenseItemType = {
+	title: string;
+	amount: number;
+	date: any;
+};
+
+const ExpenseItem = (props: ExpenseItemType) => {
 	const { title, amount, date } = props;
 
 	return (
 		<div className='expense-item'>
-			<div>
-				<div>{date.toLocaleString('en-US', { month: 'long' })}</div>
-				<div>Year</div>
-				<div>Day</div>
-			</div>
-			{/* <div>{date.toISOString()}</div> */}
+			<ExpenseDate date={date} />
 			<div className='expense-item__description'>
 				<h2>{title}</h2>
 				<div className='expense-item__price'>${amount}</div>
