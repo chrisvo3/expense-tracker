@@ -1,5 +1,5 @@
 import ExpenseDate from './ExpenseDate';
-import './ExpenseItem.css';
+import '../styles/ExpenseItem.css';
 
 export type ExpenseItemType = {
 	title: string;
