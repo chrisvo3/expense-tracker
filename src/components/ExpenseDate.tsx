@@ -1,12 +1,10 @@
 import '../styles/ExpenseDate.css';
 
-export type ExpenseDateType = {
+interface ExpenseDateProps {
 	date: Date;
-};
+}
 
-const ExpenseDate = (props: ExpenseDateType) => {
-	const { date } = props;
-
+const ExpenseDate: React.FC<ExpenseDateProps> = ({ date }) => {
 	const month = date.toLocaleString('en-US', { month: 'long' });
 	const day = date.toLocaleString('en-US', { day: '2-digit' });
 	const year = date.getFullYear();

@@ -1,13 +1,8 @@
 import ExpenseDate from './ExpenseDate';
 import '../styles/ExpenseItem.css';
+import { Expense } from '../types/types';
 
-export type ExpenseItemType = {
-	title: string;
-	amount: number;
-	date: Date;
-};
-
-const ExpenseItem = (props: ExpenseItemType) => {
+const ExpenseItem = (props: Expense) => {
 	const { title, amount, date } = props;
 
 	return (

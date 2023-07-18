@@ -1,9 +1,12 @@
 import React from 'react';
+import ExpenseContainer from './components/ExpenseContainer';
+
+import { Expenses } from './types/types';
+
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
 
 function App() {
-	const expenses = [
+	const expenses: Expenses = [
 		{
 			id: 'e1',
 			title: 'Toilet Paper',
@@ -28,16 +31,7 @@ function App() {
 	return (
 		<div>
 			<h2>Let's get started!</h2>
-			{expenses.map((expense) => {
-				return (
-					<ExpenseItem
-						key={expense.id}
-						title={expense.title}
-						amount={expense.amount}
-						date={expense.date}
-					/>
-				);
-			})}
+			<ExpenseContainer expenses={expenses} />
 		</div>
 	);
 }
