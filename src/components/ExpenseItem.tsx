@@ -4,7 +4,7 @@ import './ExpenseItem.css';
 export type ExpenseItemType = {
 	title: string;
 	amount: number;
-	date: any;
+	date: Date;
 };
 
 const ExpenseItem = (props: ExpenseItemType) => {

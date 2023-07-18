@@ -1,5 +1,5 @@
 export type ExpenseDateType = {
-	date: any;
+	date: Date;
 };
 
 const ExpenseDate = (props: ExpenseDateType) => {
