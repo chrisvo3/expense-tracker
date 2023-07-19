@@ -10,44 +10,44 @@ type PrevStateType = {
 };
 
 const ExpenseForm = () => {
-	// const [inputTitle, setInputTitle] = useState('');
-	// const [inputAmount, setInputAmount] = useState('');
-	// const [inputDate, setInputDate] = useState('');
+	const [inputTitle, setInputTitle] = useState('');
+	const [inputAmount, setInputAmount] = useState('');
+	const [inputDate, setInputDate] = useState('');
 
-	const [userInput, setUserInput] = useState({
-		inputTitle: '',
-		inputAmount: '',
-		inputDate: '',
-	});
+	// const [userInput, setUserInput] = useState({
+	// 	inputTitle: '',
+	// 	inputAmount: '',
+	// 	inputDate: '',
+	// });
 
 	const handleTitleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-		// setInputTitle(event.target.value);
-		setUserInput((prevState: PrevStateType) => {
-			return {
-				...prevState,
-				inputTitle: event.target.value,
-			};
-		});
+		setInputTitle(event.target.value);
+		// setUserInput((prevState: PrevStateType) => {``
+		// 	return {
+		// 		...prevState,
+		// 		inputTitle: event.target.value,
+		// 	};
+		// });
 	};
 
 	const handleAmountInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-		// setInputAmount(event.target.value);
-		setUserInput((prevState: PrevStateType) => {
-			return {
-				...prevState,
-				inputAmount: event.target.value,
-			};
-		});
+		setInputAmount(event.target.value);
+		// setUserInput((prevState: PrevStateType) => {
+		// 	return {
+		// 		...prevState,
+		// 		inputAmount: event.target.value,
+		// 	};
+		// });
 	};
 
 	const handleDateInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-		// setInputDate(event.target.value);
-		setUserInput((prevState: PrevStateType) => {
-			return {
-				...prevState,
-				inputDate: event.target.value,
-			};
-		});
+		setInputDate(event.target.value);
+		// setUserInput((prevState: PrevStateType) => {
+		// 	return {
+		// 		...prevState,
+		// 		inputDate: event.target.value,
+		// 	};
+		// });
 	};
 
 	const handleSubmitForm = () => {
