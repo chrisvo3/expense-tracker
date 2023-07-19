@@ -3,6 +3,12 @@ import { useState } from 'react';
 
 import '../../styles/ExpenseForm.css';
 
+type PrevStateType = {
+	inputTitle: string;
+	inputAmount: string;
+	inputDate: string;
+};
+
 const ExpenseForm = () => {
 	// const [inputTitle, setInputTitle] = useState('');
 	// const [inputAmount, setInputAmount] = useState('');
@@ -16,7 +22,7 @@ const ExpenseForm = () => {
 
 	const handleTitleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		// setInputTitle(event.target.value);
-		setUserInput((prevState) => {
+		setUserInput((prevState: PrevStateType) => {
 			return {
 				...prevState,
 				inputTitle: event.target.value,
@@ -26,7 +32,7 @@ const ExpenseForm = () => {
 
 	const handleAmountInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		// setInputAmount(event.target.value);
-		setUserInput((prevState) => {
+		setUserInput((prevState: PrevStateType) => {
 			return {
 				...prevState,
 				inputAmount: event.target.value,
@@ -36,7 +42,7 @@ const ExpenseForm = () => {
 
 	const handleDateInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		// setInputDate(event.target.value);
-		setUserInput((prevState) => {
+		setUserInput((prevState: PrevStateType) => {
 			return {
 				...prevState,
 				inputDate: event.target.value,
