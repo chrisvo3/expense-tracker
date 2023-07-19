@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import '../styles/Card.css';
+import '../../styles/Card.css';
 
 /**
  * Shell Component -- Card

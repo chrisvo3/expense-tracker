@@ -1,8 +1,8 @@
-import { Expenses } from '../types/types';
-import ExpenseItem from './ExpenseItem';
+import { Expenses } from '../../types/types';
 
-import '../styles/Expenses.css';
-import Card from './Card';
+import '../../styles/Expenses.css';
+import Card from '../BaseUI/Card';
+import ExpenseItem from './ExpenseItem';
 
 export type ExpenseContainerType = {
 	expenses: Expenses;

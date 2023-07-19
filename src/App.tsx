@@ -1,5 +1,5 @@
 import React from 'react';
-import ExpenseContainer from './components/ExpenseContainer';
+import ExpenseContainer from './components/Expenses/ExpenseContainer';
 
 import { Expenses } from './types/types';
 
