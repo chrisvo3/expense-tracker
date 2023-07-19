@@ -2,6 +2,7 @@ import { Expenses } from '../types/types';
 import ExpenseItem from './ExpenseItem';
 
 import '../styles/Expenses.css';
+import Card from './Card';
 
 export type ExpenseContainerType = {
 	expenses: Expenses;
@@ -11,7 +12,7 @@ const ExpenseContainer = (props: ExpenseContainerType) => {
 	const { expenses } = props;
 
 	return (
-		<div className='expenses'>
+		<Card className='expenses'>
 			{expenses.map((expense) => (
 				<ExpenseItem
 					key={expense.id}
@@ -21,7 +22,7 @@ const ExpenseContainer = (props: ExpenseContainerType) => {
 					date={expense.date}
 				/>
 			))}
-		</div>
+		</Card>
 	);
 };
 
