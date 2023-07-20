@@ -75,7 +75,7 @@ const ExpenseForm = (props: ExpenseFormProps) => {
 			date: new Date(inputDate),
 		};
 
-		console.log('newExpenseData', newExpenseData);
+		// console.log('newExpenseData', newExpenseData);
 		handleSaveData(newExpenseData as NewExpenseData);
 
 		// reset

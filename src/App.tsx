@@ -1,7 +1,7 @@
 import React from 'react';
 import ExpenseContainer from './components/Expenses/ExpenseContainer';
 
-import { Expenses } from './types/types';
+import { Expense, Expenses } from './types/types';
 
 import './App.css';
 import NewExpense from './components/NewExpense/NewExpense';
@@ -29,9 +29,13 @@ function App() {
 		},
 	];
 
+	const handleAddNewExpense = (data: Expense) => {
+		console.log('handleAddNewExpense', data);
+	};
+
 	return (
 		<div>
-			<NewExpense />
+			<NewExpense handleAddNewExpense={handleAddNewExpense} />
 			<ExpenseContainer expenses={expenses} />
 		</div>
 	);

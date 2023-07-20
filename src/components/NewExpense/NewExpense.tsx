@@ -3,15 +3,23 @@ import React from 'react';
 import ExpenseForm from './ExpenseForm';
 
 import '../../styles/NewExpense.css';
-import { NewExpenseData } from '../../types/types';
+import { Expense, NewExpenseData } from '../../types/types';
 
-const NewExpense = () => {
+type NewExpenseProps = {
+	handleAddNewExpense: (data: Expense) => void;
+};
+
+const NewExpense = (props: NewExpenseProps) => {
+	const { handleAddNewExpense } = props;
+
 	const handleSaveData = (data: NewExpenseData) => {
 		const expenseData = {
 			...data,
 			id: Math.random().toString(),
+			amount: parseFloat(data.amount),
 		};
-		console.log(expenseData);
+		// console.log(expenseData);
+		handleAddNewExpense(expenseData as Expense);
 	};
 
 	return (
