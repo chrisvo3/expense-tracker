@@ -2,7 +2,7 @@ import { Expenses } from '../../types/types';
 
 import '../../styles/Expenses.css';
 import Card from '../BaseUI/Card';
-import ExpenseItem from './ExpenseItem';
+import ExpenseItem from '../BaseUI/ExpenseItem';
 import { useState } from 'react';
 import ExpensesFilter from './ExpenseFilter';
 
