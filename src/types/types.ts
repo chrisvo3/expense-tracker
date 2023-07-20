@@ -13,3 +13,10 @@ const expensesSchema = z.array(expenseSchema);
 
 export type Expense = z.infer<typeof expenseSchema>;
 export type Expenses = z.infer<typeof expensesSchema>;
+
+// new expense data
+export type NewExpenseData = {
+	title: string;
+	amount: string;
+	date: Date;
+};
